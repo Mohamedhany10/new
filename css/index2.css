@@ -45,9 +45,11 @@ body{
 /* end global rules */
 /* start header  */
 .header{
-    position: relative;
+    position: fixed;
     box-shadow: 0 0 10px #505050;
     background-color: #fff;
+    width: 100%;
+    z-index: 100000000;
 }
 .header .container
 {
@@ -199,6 +201,89 @@ body{
         padding: 47px 24px;
     }
 }
+/* start exsams */
+.landing{
+    position: relative;
+}
+.landing::before{
+    content: "";
+    background-color: #ececec;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: -74px;
+    left: 0;
+    transform: skewY( 
+-6deg);
+}
+.exsams .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: 150px;
+    position: relative;
+}
+.exsams .text h1{
+    font-size: 50px;
+    color: var(--main-color);
+    font-weight: bold;
+    text-shadow: 3px 2px 9px #7aa0bf;
+    padding:100px 0;
+}
+@media ( max-width: 992px ){
+    .exsams .text h1{
+        font-size: 24px;
+        padding: 30px;
+    }
+}
+.exsams .group{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    box-shadow: -5px -7px 5px var(--main-color);
+    border-radius: 19px;
+}
+@media ( max-width: 992px ){
+    .exsams .group{
+        padding:  0;
+    }
+}
+.exsams .group a{
+    padding: 18px 21px;
+    color: white;
+    background-color: var(--main-color);
+    border-radius: 6px;
+    margin: 0 70px;
+    font-size: 20px;
+    box-shadow: -6px -6px 0px #0950898a;
+
+}
+@media ( max-width: 992px ){
+    .exsams .group a{
+    padding: 5px;
+    font-size: 16px;
+    margin: 6px;
+    box-shadow: -3px -3px 5px #0950898a;
+}
+}
+.exsams .group a:hover{
+  color:var(--main-color);
+  background-color: #eee;
+  font-weight: bold;
+}
+.exsams .group .links{
+    padding: 80px 30px;
+}
+@media( max-width:992px ){
+    .exsams .group .links{
+        padding: 47px 24px;
+    }
+}
+/* end exsams */
 .degrees {
 position: relative;
 }
@@ -257,3 +342,18 @@ position: relative;
     }
 }
 /* end landing */
+/* start footer  */
+.footer .container {
+    text-align: center;
+    color: #0057a0;
+    font-weight: bold;
+}
+.footer .container span {
+    color: red;
+}
+.footer .container a {
+    color: #f70054;
+    font-size: 18px;
+    font-weight: bold;
+}
+/* end footer */
